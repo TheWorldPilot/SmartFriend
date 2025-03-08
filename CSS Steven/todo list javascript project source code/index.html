@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- link the css file to html file -->
+<link rel="stylesheet" href="style.css">
+    <title>to-do list</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header" id="list">
+            <h1>To-do List</h1>
+            <input type="text" name="" id="input" placeholder="Add item...">
+            <span onclick="newItem();" class="btn">Add</span>
+        </div>
+        <!-- list div -->
+        <ul id="items">
+            <li>Math assignment</li>
+            <li>English homework</li>
+            <li class="checked">Make breakfast</li>
+            <li>Call to Mom</li>
+            <li>Prepare for presentation</li>
+        </ul>
+    </div>
+    <!-- link the javascript file to html file -->
+    <script src="script.js"></script>
+</body>
+</html>

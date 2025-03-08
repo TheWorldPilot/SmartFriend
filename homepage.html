@@ -2,64 +2,243 @@
 
 <head>
     <title>SmartFriend</title>
-    <link rel="icon" type="image/x-icon" href="https://drive.google.com/thumbnail?id=1M-RkhD2PwCE6KGkyK1lFqYiRIPzngHJM&sz=w1000">
+    <link rel="icon" type="image/x-icon" href="gambar/LogoSmartFriend.png">
     <link rel="stylesheet" href="all-in-style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script type="text/javascript" src="all-in-script.js"></script>
+    
 </head>
 
 <header>
     <div class="p1">
-        <h1>Welcome to</h1>
+        <h1>WELCOME TO</h1>
         <h1 style="font-size:100px">SMARTFRIEND</h1>
+        <button class="Learn">Learn More</button>
     </div>
 </header>
 
-<nav>
-    <a href="">Kategori</a>
-    <a href="">Kalkulator</a>
-    <a href="page-table.html">Table</a>
-    <a href="">Tentang Kami</a>
-    <a href="homepage.html">Beranda</a>
-</nav>
+<div style="top: 0; position: sticky; z-index:1;">
+    <nav> 
+        <a href="page-materi.html">Materi</a>
+        <a href="page-calc.html">Kalkulator</a>
+        <a href="page-table.html">Tabel</a>
+        <a href="page-about-us.html">Tentang Kami</a>
+        <a href="homepage.html">Beranda</a> 
+        <div class="dropdown"> 
+            <button class="dropdown-toggle menu-item">
+                <span class="item-icon">
+                  <i class='bx bxs-user-circle'></i>
+                </span>
+                <span class="item-txt" id ="usernameDisplay" style="font-family: Arial Black;"></span>
+            </button>
+            <div class="dropdown-content">
+                <li class="menu-item">
+                <span class="item-icon">
+                  <i class='bx bxs-dashboard'></i>
+                </span>
+                <span class="item-txt">To Do List</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-icon">
+                  <i class='bx bx-cog'></i>
+                </span>
+                <span class="item-txt">Setting</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-icon">
+                  <i class='bx bx-log-out'></i>
+                </span>
+                <span class="item-txt" onclick="logOut()">Log Out</span>
+              </li>
+            </div>
+          </div>  
+    </nav>
+</div>
 
-<body>
-    <h2 style="text-align: center; padding:5px">Sekarang jam:</h2>
-    <h2 style="text-align: center; padding:10px; font-size: 40px;"><span id="time"></span></h2>
+<body onload="usernameDisp()">
+    <h3 style="text-align: center; padding:5px;">Sekarang jam:</h3>
+    <h3 style="text-align: center; padding:10px; font-size: 40px;"><span id="time"></span></h3>
     
     <div class="parallax"></div>
+    <div class="bp">
+        <img src="https://cdn.administrace.tv/2022/06/20/hd/9e95a06c5dea249505ae6999a72f5d53.jpg" width="700" >
+        <div class="bpKanan">
+        <div class="Kanan"><h1>Apa itu SmartFriend?</h1>
+        <p> SmartFriend adalah sebuah platform website cerdas yang dirancang secara khusus untuk memberikan pengalaman belajar yang lebih efektif, menyenangkan, dan interaktif. Dengan menghadirkan berbagai fitur unggulan, SmartFriend bertujuan untuk menjadi teman belajar terbaik bagi semua kalangan, mulai dari pelajar, mahasiswa, hingga siapa saja yang ingin memperluas wawasan dan meningkatkan keterampilan.</p>
+        </div>
+        </div>
+    </div>
+    <div class="bph1">
+        <h1>Apa Fungsinya?</h1>
+    </div>
+    <div class="bptext">
+        <p>Fungsi utama dari SmartFriend adalah menyediakan berbagai materi edukasi untuk membantu pengguna mengembangkan pengetahuan dan keterampilan. SmartFriend membuat proses belajar lebih menarik dan mudah diakses. Dirancang untuk semua kalangan, dari pelajar hingga profesional, website ini menyajikan materi yang sesuai dengan tingkat kemampuan dan kebutuhan penggunanya.    </p>
+    </div>
+    <div class="bpimg">
+        <img src="https://img.okezone.com/content/2024/02/17/330/2971475/kenapa-luar-angkasa-sangat-gelap-ini-penjelasan-lengkap-alquran-dan-sains-cWuN86pk3o.jpg" width="800">
+    </div>
 
-    <h1>Profil Kami</h1>
+    <strong><p style="text-align: center; padding:10px; font-size:60px"> Fitur SmartFriend </p></strong>
+    <div class="Flex">
+    <div class="wrapper">
+        <div class="card"> 
+            <div class="front-page1">
+                <div class="card-info">
+                    <h2 class="card-title">Kalkulator</h2>
+                    <p class="card-subtitle">Sebuah Alat Bantu</p>
+                </div> 
+            </div>
+            
+            <div class="back-page">
+                <div class="card-content">
+                    <h3>Kalkulator</h3>
+                    <p class="card-description"> Smartfriend menyediakan kalkulator online gratis yang dapat dipakai seluruh pelajar agar mempermudah pembelajaran mereka dan juga dapat membantu dalam penugasan mereka. </p>
+                    <a href="page-calc.html"><button class="card-button">Uji Fitur</button></a>
+                </div>
+            </div>
 
-    <div class="container">
-        <div class="kiriSteven">
-            <img src="https://media-cgk1-1.cdn.whatsapp.net/v/t61.24694-24/406176588_363107636232233_1383773990613454303_n.jpg?ccb=11-4&oh=01_Q5AaIBcqL9aDPqvVPn54DVqNnYFdzerEE2Zg3GJAb02cEOxo&oe=6736FD9F&_nc_sid=5e03e0&_nc_cat=104" width="100" height="100">
-        </div>
-        <div class="kanan">
-            <h2>Ujan156_</h2>
-            <div class="p1">Seorang siswa dari Slamet Riyadi ditugaskan membuat website informatika yang informatif dan menarik sebagai bagian dari pengembangan keterampilan teknologi.</div>
         </div>
     </div>
-    <div class="container">
-        <div class="kiriBeni">
-            <img src="https://media-cgk1-1.cdn.whatsapp.net/v/t61.24694-24/409319250_1388561465368971_9085578277220894408_n.jpg?ccb=11-4&oh=01_Q5AaIM9PO_MXKoYKRl0c4g1eR0yfaLGlruIpJgTtP5oIVBdQ&oe=67375649&_nc_sid=5e03e0&_nc_cat=111" width="100" height="100">
+
+    <div class="wrapper">
+        <div class="card"> 
+
+            <div class="front-page2">
+                <div class="card-info">
+                    <div class="kursus">
+                    <h2 class="card-title">Kursus</h2>
+                    <p class="card-subtitle">Sebuah Alat Bantu</p>
+                    </div>
+                </div> 
             </div>
-        <div class="kanan">
-            <h2>TheWorldPilot</h2>
-            <div class="p1">Seorang siswa dari Slamet Riyadi ditugaskan membuat website informatika yang informatif dan menarik sebagai bagian dari pengembangan keterampilan teknologi.</div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="kiriRiko">
-            <img src="https://media-cgk1-1.cdn.whatsapp.net/v/t61.24694-24/362341614_800856618191378_5902294277286188338_n.jpg?ccb=11-4&oh=01_Q5AaIJGZRm_uDUxEsoufmqAqHuD9SEJ9icTA8PQI-HPwwaLX&oe=673843E8&_nc_sid=5e03e0&_nc_cat=111" width="100" height="100">
+            
+            <div class="back-page">
+                <div class="card-content">
+                    <h3>Kursus Interaktif</h3>
+                    <p class="card-description"> SmartFriend menawarkan berbagai kursus yang bisa diikuti oleh pengguna. Setiap kursus disusun secara interaktif dengan video, materi bacaan, dan kuis yang membantu pemahaman lebih mendalam.</p>
+                    <a href="page-materi.html"><button class="card-button">Uji Fitur</button></a>
+                </div>
             </div>
-        <div class="kanan">
-            <h2>Yoe</h2>
-            <div class="p1">Gatau ini anak nyasar</div>
+
         </div>
     </div>
-    <div class="container">
-        <iframe width="900" height="500" src="https://www.youtube.com/embed/ti_sOUmvGQE?si=fIqtmsJAWoWVDY3o" allowfullscreen></iframe>
+    <div class="wrapper">
+        <div class="card"> 
+
+            <div class="front-page3">
+                <div class="card-info">
+                    <h2 class="card-title">Komunitas</h2>
+                    <p class="card-subtitle">Forum Diskusi</p>
+                </div> 
+            </div>
+            
+            <div class="back-page">
+                <div class="card-content">
+                    <h3>Komunitas</h3>
+                    <p class="card-description"> Fitur forum memungkinkan pengguna untuk berdiskusi dengan sesama peserta kursus, berbagi pemahaman, dan bertanya kepada mentor atau instruktur. Menghubungkan para pelajar untuk saling mendukung dan belajar bersama, menciptakan lingkungan pembelajaran yang kolaboratif.
+                    </p>
+                    <a href="page-wip.html"><button class="card-button">Uji Fitur</button></a>
+                </div>
+            </div>
+
+        </div>
     </div>
+    <div class="wrapper">
+        <div class="card"> 
+
+            <div class="front-page4">
+                <div class="card-info">
+                    <h2 class="card-title">Quiz</h2>
+                    <p class="card-subtitle">Sebuah Test Ujian</p>
+                </div> 
+            </div>
+            
+            <div class="back-page">
+                <div class="card-content">
+                    <h3>Quiz</h3>
+                    <p class="card-description"> Setiap kursus memiliki ujian untuk mengukur pemahaman pengguna. Setelah ujian selesai dan berhasil diselesaikan, pengguna akan mendapatkan poin penilaian sesuai efesiensi mereka dalam mengerjakan ujian tersebut. </p>
+                    <a href="page-kuis.html"><button class="card-button">Uji Fitur</button></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="card"> 
+
+            <div class="front-page5">
+                <div class="card-info">
+                    <h2 class="card-title">Notifikasi</h2>
+                    <p class="card-subtitle">Sebuah Alat Pengingat</p>
+                </div> 
+            </div>
+            
+            <div class="back-page">
+                <div class="card-content">
+                    <h3>Notifikasi</h3>
+                    <p class="card-description"> SmartFriend memberikan pengingat dan notifikasi tentang jadwal kelas, ujian, atau tugas yang harus diselesaikan. Membantu pengguna tetap on-track dan tidak melewatkan hal-hal penting dalam proses belajar mereka. </p>
+                    <a href="page-wip.html"><button class="card-button">Uji Fitur</button></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="card"> 
+
+            <div class="front-page6">
+                <div class="card-info">
+                    <h2 class="card-title">To Do List</h2>
+                    <p class="card-subtitle">Sebuah Catatan</p>
+                </div> 
+            </div>
+            
+            <div class="back-page">
+                <div class="card-content">
+                    <h3>To Do List</h3>
+                    <p class="card-description"> To-Do List adalah daftar tugas yang harus diselesaikan dalam jangka waktu tertentu. Fungsinya untuk membantu mengorganisir pekerjaan, meningkatkan produktivitas, dan memastikan tidak ada tugas yang terlewat. To-do list biasanya disusun berdasarkan prioritas dan diperbarui secara berkala. </p>
+                    <a href="page-wip.html"><button class="card-button">Uji Fitur</button></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 </body>
+
+<footer>
+    <p style="font-size:50px; font-style:italic; text-align:center; width: 195%; font-weight: bold;">"Education is the most powerful <br> weapon to change the world."</p>
+    <br>
+    <div class="nelson"><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Nelson_Mandela_1994.jpg/800px-Nelson_Mandela_1994.jpg></div>
+    <br>
+    <p style="font-size:30px; font-style:italic; text-align:center; width: 195%; font-weight: bold;">Nelson Mandela</p>        
+    <br>
+    <div class="footerLeft">
+        <h3>SmartFriend™</h3>
+        <p>Your friend in learning</p>
+        <p style="font-size:15px;">Part of PT Basreng Dunia</p>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4296.182713817196!2d107.268459463224!3d-6.2928997659014625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1733122510965!5m2!1sen!2sid" width="600" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
+        <br>
+        <br>
+    </div>
+    <div class="footerRight">
+        <a href="homepage.html"><p>Beranda</p></a>
+        <a href="page-about-us.html"><p>Tentang Kami</p></a>
+        <a href="page-table.html"><p>Tabel</p></a>
+        <a href="page-calc.html"><p>Kalkulator</p></a>
+        <br>
+        <br>
+        <p>Jalan Pandawa No. 5 Perum Resinda</p>
+        <p>Purwadana, Karawang Barat</p>
+        <p>Karawang, Jawa Barat, 41361</p>
+        <br>
+        <p>Telepon: +62 812-1080-0963 | Email: support@smartfriend.co.edu</p>
+        <p>Instagram: @smartfriend | Twitter: smartfriend_learning</p>
+    </div>
+    <div class="bottomFoot">
+        <p>Copyright © 2024. SmartFriend</p>
+    </div>
+</footer>
 
 </html>

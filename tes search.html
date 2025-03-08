@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Search Bar with Input Display</title>
+</head>
+<body>
+
+<h1>Search</h1>
+
+<input type="text" id="myInput">
+<button onclick="showInput()">INI</button>
+
+<p id="displayInput"></p>
+
+<script>
+function showInput() {
+  // Get the value of the input field
+  var inputValue = document.getElementById("myInput").value;
+
+  // Display the input value in the paragraph
+  document.getElementById("displayInput").innerHTML = inputValue;
+}
+</script>
+
+</body>
+</html>

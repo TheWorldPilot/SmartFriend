@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<head>
+    <title>SmartFriend</title>
+    <link rel="icon" type="image/x-icon" href="gambar/LogoSmartFriend.png">
+    <link rel="stylesheet" href="all-in-style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="text/javascript" src="all-in-script.js"></script>
+    
+</head>
+
+<header>
+    <div class="p1">
+        <h1>KUIS</h1>
+        <h1 style="font-size:100px">SMARTFRIEND</h1>
+        <button class="Learn">Learn More</button>
+    </div>
+</header>
+
+<div style="top: 0; position: sticky; z-index:1;">
+    <nav> 
+        <a href="page-materi.html">Materi</a>
+        <a href="page-calc.html">Kalkulator</a>
+        <a href="page-table.html">Tabel</a>
+        <a href="page-about-us.html">Tentang Kami</a>
+        <a href="homepage.html">Beranda</a> 
+        <div class="dropdown"> 
+            <button class="dropdown-toggle menu-item">
+                <span class="item-icon">
+                  <i class='bx bxs-user-circle'></i>
+                </span>
+                <span class="item-txt" id ="usernameDisplay" style="font-family: Arial Black;"></span>
+            </button>
+            <div class="dropdown-content">
+                <li class="menu-item">
+                <span class="item-icon">
+                  <i class='bx bxs-dashboard'></i>
+                </span>
+                <span class="item-txt">To Do List</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-icon">
+                  <i class='bx bx-cog'></i>
+                </span>
+                <span class="item-txt">Setting</span>
+              </li>
+              <li class="menu-item">
+                <span class="item-icon">
+                  <i class='bx bx-log-out'></i>
+                </span>
+                <span class="item-txt" onclick="logOut()">Log Out</span>
+              </li>
+            </div>
+          </div>  
+    
+    </nav>
+    </div>
+
+<body onload="usernameDisp()">
+    <br>
+    <br>
+    <br>
+    <div class="container4">
+        <h1>Kuis Informatika</h1>
+        <div class="question">
+            <p>1. Apa yang dimaksud dengan perangkat lunak (software) dalam sistem komputer?</p>
+            <div class="options">
+                <input type="radio" name="no1" id="q1a" value="A">
+                <label for="q1a">Perangkat keras yang dapat disentuh</label>
+
+                <input type="radio" name="no1" id="q1b" value="B">
+                <label for="q1b">Komponen fisik komputer</label>
+
+                <input type="radio" name="no1" id="q1c"  value="C">
+                <label for="q1c">Program atau aplikasi yang menjalankan tugas tertentu</label>
+
+                <input type="radio" name="no1" id="q1d" value="D">
+                <label for="q1d">Jaringan yang menghubungkan komputer</label>
+
+                <input type="radio" name="no1" id="q1e" value="E">
+                <label for="q1e">Perangkat yang hanya digunakan untuk gaming</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>2. Jenis perangkat lunak yang digunakan untuk mengelola sumber daya perangkat keras dan menyediakan layanan untuk aplikasi adalah…</p>
+            <div class="options">
+                <input type="radio" name="no2" id="q2a" value="A">
+                <label for="q2a">Aplikasi</label>
+
+                <input type="radio" name="no2" id="q2b" value="B">
+                <label for="q2b">Antivirus</label>
+
+                <input type="radio" name="no2" id="q2c"  value="C">
+                <label for="q2c">Driver</label>
+
+                <input type="radio" name="no2" id="q2d" value="D">
+                <label for="q2d">Firmware</label>
+
+                <input type="radio" name="no2" id="q2e" value="E">
+                <label for="q2e">Sistem operasi</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>3. Dalam konsep pemrograman, struktur kendali percabangan digunakan untuk…</p>
+            <div class="options">
+                <input type="radio" name="no3" id="q3a" value="A">
+                <label for="q3a">Mengulang perintah secara terus-menerus</label>
+
+                <input type="radio" name="no3" id="q3b" value="B">
+                <label for="q3b">Mengeksekusi perintah berdasarkan suatu kondisi</label>
+
+                <input type="radio" name="no3" id="q3c"  value="C">
+                <label for="q3c">Menyusun daftar instruksi tanpa kondisi</label>
+
+                <input type="radio" name="no3" id="q3d" value="D">
+                <label for="q3d">Menyimpan data dalam variabel</label>
+
+                <input type="radio" name="no3" id="q3e" value="E">
+                <label for="q3e">Menghubungkan perangkat keras dengan perangkat lunak</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>4. Apa fungsi utama dari algoritma dalam pemrograman komputer?</p>
+            <div class="options">
+                <input type="radio" name="no4" id="q4a" value="A">
+                <label for="q4a">Menyediakan langkah-langkah penyelesaian masalah secara logis</label>
+
+                <input type="radio" name="no4" id="q4b" value="B">
+                <label for="q4b">Mengoptimalkan kecepatan internet</label>
+
+                <input type="radio" name="no4" id="q4c"  value="C">
+                <label for="q4c">Menyimpan data dalam database</label>
+
+                <input type="radio" name="no4" id="q4d" value="D">
+                <label for="q4d">Memproses input dari pengguna</label>
+
+                <input type="radio" name="no4" id="q4e" value="E">
+                <label for="q4e">Mempercepat akses memori komputer</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>5. Di antara berikut ini, manakah yang merupakan contoh bahasa pemrograman tingkat tinggi?</p>
+            <div class="options">
+                <input type="radio" name="no5" id="q5a" value="A">
+                <label for="q5a"> C++</label>
+
+                <input type="radio" name="no5" id="q5b" value="B">
+                <label for="q5b">Python</label>
+
+                <input type="radio" name="no5" id="q5c"  value="C">
+                <label for="q5c">Machine Language</label>
+
+                <input type="radio" name="no5" id="q5d" value="D">
+                <label for="q5d">Flowchart</label>
+
+                <input type="radio" name="no5" id="q5e" value="E">
+                <label for="q5e">HTML</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>6. Manakah dari berikut ini yang termasuk dalam contoh perangkat keras (hardware) komputer?</p>
+            <div class="options">
+                <input type="radio" name="no6" id="q6a" value="A">
+                <label for="q6a"> Microsoft Word</label>
+
+                <input type="radio" name="no6" id="q6b" value="B">
+                <label for="q6b">Linux</label>
+
+                <input type="radio" name="no6" id="q6c"  value="C">
+                <label for="q6c">Motherboard</label>
+
+                <input type="radio" name="no6" id="q6d" value="D">
+                <label for="q6d">Google Chrome</label>
+
+                <input type="radio" name="no6" id="q6e" value="E">
+                <label for="q6e">Photoshop</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>7. Protokol yang digunakan untuk mengirim email dari klien ke server adalah…</p>
+            <div class="options">
+                <input type="radio" name="no7" id="q7a" value="A">
+                <label for="q7a">HTTP</label>
+
+                <input type="radio" name="no7" id="q7b" value="B">
+                <label for="q7b">FTP</label>
+
+                <input type="radio" name="no7" id="q7c"  value="C">
+                <label for="q7c">TCP/IP</label>
+
+                <input type="radio" name="no7" id="q7d" value="D">
+                <label for="q7d">POP3</label>
+
+                <input type="radio" name="no7" id="q7e" value="E">
+                <label for="q7e">SMTP</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>8. Dalam jaringan komputer, apa fungsi dari router?</p>
+            <div class="options">
+                <input type="radio" name="no8" id="q8a" value="A">
+                <label for="q8a">Menyimpan data pengguna</label>
+
+                <input type="radio" name="no8" id="q8b" value="B">
+                <label for="q8b">Menghubungkan beberapa jaringan dan meneruskan paket data</label>
+
+                <input type="radio" name="no8" id="q8c"  value="C">
+                <label for="q8c">Menampilkan halaman web</label>
+
+                <input type="radio" name="no8" id="q8d" value="D">
+                <label for="q8d">Meningkatkan kecepatan prosesor</label>
+
+                <input type="radio" name="no8" id="q8e" value="E">
+                <label for="q8e">Mengelola basis data pengguna</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>9. Jenis memori yang bersifat volatil, yang berarti akan kehilangan data ketika daya dimatikan, adalah…</p>
+            <div class="options">
+                <input type="radio" name="no9" id="q9a" value="A">
+                <label for="q9a">ROM</label>
+
+                <input type="radio" name="no9" id="q9b" value="B">
+                <label for="q9b">Flash Drive</label>
+
+                <input type="radio" name="no9" id="q9c"  value="C">
+                <label for="q9c">Hard Disk</label>
+
+                <input type="radio" name="no9" id="q9d" value="D">
+                <label for="q9d">RAM</label>
+
+                <input type="radio" name="no9" id="q9e" value="E">
+                <label for="q9e">SSD</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>10. Manakah dari berikut ini yang termasuk dalam model basis data relasional?</p>
+            <div class="options">
+                <input type="radio" name="no10" id="q10a" value="A">
+                <label for="q10a">JSON</label>
+
+                <input type="radio" name="no10" id="q10b" value="B">
+                <label for="q10b">MySQL</label>
+
+                <input type="radio" name="no10" id="q10c"  value="C">
+                <label for="q10c">XML</label>
+
+                <input type="radio" name="no10" id="q10d" value="D">
+                <label for="q10d">HTML</label>
+
+                <input type="radio" name="no10" id="q10e" value="E">
+                <label for="q10e">CSV</label>
+            </div>
+        </div>
+    <input type="button" onclick="kuis()" value="Submit"></input>
+    <div class="h2kuis">Result :<span id="hasilkuis"></span> </div>
+</div>
+</body>
+
+<div style="height: 200px"></div>
+
+<footer>
+    <p style="font-size:50px; font-style:italic; text-align:center; width: 195%; font-weight: bold;">"Education is the most powerful <br> weapon to change the world."</p>
+    <br>
+    <div class="nelson"><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Nelson_Mandela_1994.jpg/800px-Nelson_Mandela_1994.jpg></div>
+    <br>
+    <p style="font-size:30px; font-style:italic; text-align:center; width: 195%; font-weight: bold;">Nelson Mandela</p>        
+    <br>
+    <div class="footerLeft">
+        <h3>SmartFriend™</h3>
+        <p>Your friend in learning</p>
+        <p style="font-size:15px;">Part of PT Basreng Dunia</p>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4296.182713817196!2d107.268459463224!3d-6.2928997659014625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1733122510965!5m2!1sen!2sid" width="600" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
+        <br>
+        <br>
+    </div>
+    <div class="footerRight">
+        <a href="homepage.html"><p>Beranda</p></a>
+        <a href="page-about-us.html"><p>Tentang Kami</p></a>
+        <a href="page-table.html"><p>Tabel</p></a>
+        <a href="page-calc.html"><p>Kalkulator</p></a>
+        <br>
+        <br>
+        <p>Jalan Pandawa No. 5 Perum Resinda</p>
+        <p>Purwadana, Karawang Barat</p>
+        <p>Karawang, Jawa Barat, 41361</p>
+        <br>
+        <p>Telepon: +62 812-1080-0963 | Email: support@smartfriend.co.edu</p>
+        <p>Instagram: @smartfriend | Twitter: smartfriend_learning</p>
+    </div>
+    <div class="bottomFoot">
+        <p>Copyright © 2024. SmartFriend</p>
+    </div>
+</footer>
+
+</html>

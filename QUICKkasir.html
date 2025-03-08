@@ -1,0 +1,160 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUICKKASIR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <style>
+        body { font-family: 'Times new roman', sans-serif; }
+        .hidden { display: none; }
+        .result { margin-top: 20px; }
+    </style>
+    <script>
+        let finalTotal = 0;
+
+        function parseCurrencyInput(input) {
+            return parseFloat(input.replace(/,/g, '').replace(/\./g, ''));
+        }
+
+        function formatWithThousandsSeparator(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ",00";
+        }
+
+        function calculateTotal() {
+            const restaurantName = document.getElementById('restaurantName').value;
+            const restaurantAddress = document.getElementById('restaurantAddress').value;
+            const serverName = document.getElementById('serverName').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+
+            let total = 0;
+            const items = [];
+            const itemRows = document.querySelectorAll('.itemRow');
+            itemRows.forEach(row => {
+                const itemName = row.querySelector('.itemName').value;
+                const itemPrice = parseCurrencyInput(row.querySelector('.itemPrice').value);
+                const itemQuantity = parseInt(row.querySelector('.itemQuantity').value);
+                const itemDiscount = parseFloat(row.querySelector('.itemDiscount').value) / 100;
+
+                const itemTotalPrice = (itemPrice - (itemPrice * itemDiscount)) * itemQuantity;
+                items.push({ name: itemName, totalPrice: itemTotalPrice, discount: itemDiscount * 100 });
+                total += itemTotalPrice;
+            });
+
+            const tax = total * 0.11;
+            const subtotalWithTax = total + tax;
+
+            const totalDiscountPercentage = parseFloat(document.getElementById('totalDiscount').value) / 100 || 0;
+            const totalDiscountAmount = subtotalWithTax * totalDiscountPercentage;
+            finalTotal = subtotalWithTax - totalDiscountAmount;
+
+            let resultHTML = `<h2 class="text-2xl font-bold mb-4">Struk Pembayaran</h2>`;
+            resultHTML += `<p>Nama Restoran: ${restaurantName}</p>`;
+            resultHTML += `<p>Alamat Restoran: ${restaurantAddress}</p>`;
+            resultHTML += `<p>Nama Kasir: ${serverName}</p>`;
+            resultHTML += `<p>Tanggal: ${date}</p>`;
+            resultHTML += `<p>Jam: ${time}</p>`;
+            resultHTML += `<p>Metode Pembayaran: ${paymentMethod}</p>`;
+            if (paymentMethod === `QR Code`) {
+                resultHTML += `<img src="file:///C:/Users/ASUS/Downloads/WhatsApp%20Image%202024-11-19%20at%2010.54.23.jpeg" alt="QR code untuk pembayaran" class="my-4">`;
+            }
+            resultHTML += `<h3 class="text-xl font-semibold mt-4">Detail Item</h3>`;
+            items.forEach(item => {
+                resultHTML += `<p>${item.name}: Rp ${formatWithThousandsSeparator(item.totalPrice)} (Diskon ${item.discount}%)</p>`;
+            });
+            resultHTML += `<p>Subtotal setelah diskon: Rp ${formatWithThousandsSeparator(total)}</p>`;
+            resultHTML += `<p>Pajak (11%): Rp ${formatWithThousandsSeparator(tax)}</p>`;
+            resultHTML += `<p>Diskon total: Rp ${formatWithThousandsSeparator(totalDiscountAmount)}</p>`;
+            resultHTML += `<p class="font-bold">TOTAL: Rp ${formatWithThousandsSeparator(finalTotal)}</p>`;
+
+            document.getElementById('result').innerHTML = resultHTML;
+            document.getElementById('result').classList.remove('hidden');
+        }
+
+        function calculateChange() {
+            const amountPaid = parseCurrencyInput(document.getElementById('amountPaid').value);
+            const change = amountPaid - finalTotal;
+
+            let changeHTML = `<p>Jumlah Dibayarkan: Rp ${formatWithThousandsSeparator(amountPaid)}</p>`;
+            changeHTML += `<p>Kembalian: Rp ${formatWithThousandsSeparator(change)}</p>`;
+            changeHTML += `<p class="mt-4 text-center font-semibold">Terima Kasih!</p>`;
+
+            document.getElementById(`result`).innerHTML += changeHTML;
+        }
+
+        function addItemRow() {
+            const itemRow = document.createElement(`div`);
+            itemRow.className = `itemRow flex space-x-4 mb-2`;
+            itemRow.innerHTML = `
+                <input type="text" class="itemName border p-2 rounded" placeholder="Nama Barang" required>
+                <input type="text" class="itemPrice border p-2 rounded" placeholder="Harga Barang" required>
+                <input type="number" class="itemQuantity border p-2 rounded" placeholder="Jumlah" required>
+                <input type="number" class="itemDiscount border p-2 rounded" placeholder="Diskon (%)" required>
+            `;
+            document.getElementById(`items`).appendChild(itemRow);
+        }
+    </script>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold mb-6">QUICKKASIR</h1>
+        <div class="mb-4">
+            <label for="restaurantName" class="block text-gray-700">Nama Restoran</label>
+            <input type="text" id="restaurantName" class="border p-2 rounded w-full" required>
+        </div>
+        <div class="mb-4">
+            <label for="restaurantAddress" class="block text-gray-700">Alamat Restoran</label>
+            <input type="text" id="restaurantAddress" class="border p-2 rounded w-full" required>
+        </div>
+        <div class="mb-4">
+            <label for="serverName" class="block text-gray-700">Nama Kasir</label>
+            <input type="text" id="serverName" class="border p-2 rounded w-full" required>
+        </div>
+        <div class="mb-4">
+            <label for="date" class="block text-gray-700">Tanggal</label>
+            <input type="date" id="date" class="border p-2 rounded w-full" required>
+        </div>
+        <div class="mb-4">
+            <label for="time" class="block text-gray-700">Jam</label>
+            <input type="time" id="time" class="border p-2 rounded w-full" required>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700">Metode Pembayaran</label>
+            <div class="flex space-x-4">
+                <label class="flex items-center">
+                    <input type="radio" name="paymentMethod" value="Cash" class="mr-2" required> Cash
+                </label>
+                <label class="flex items-center">
+                    <input type="radio" name="paymentMethod" value="Debit Card" class="mr-2" required> Debit Card
+                </label>
+                <label class="flex items-center">
+                    <input type="radio" name="paymentMethod" value="QR Code" class="mr-2" required> QR Code
+                </label>
+            </div>
+        </div>
+        <div id="items" class="mb-4">
+            <h3 class="text-xl font-semibold mb-2">Items</h3>
+            <div class="itemRow flex space-x-4 mb-2">
+                <input type="text" class="itemName border p-2 rounded" placeholder="Nama Barang" required>
+                <input type="text" class="itemPrice border p-2 rounded" placeholder="Harga Barang" required>
+                <input type="number" class="itemQuantity border p-2 rounded" placeholder="Jumlah" required>
+                <input type="number" class="itemDiscount border p-2 rounded" placeholder="Diskon (%)" required>
+            </div>
+        </div>
+        <button onclick="addItemRow()" class="bg-blue-500 text-white px-4 py-2 rounded mb-4"><i class="fas fa-plus"></i> Tambah Item</button>
+        <div class="mb-4">
+            <label for="totalDiscount" class="block text-gray-700">Diskon Total (%)</label>
+            <input type="number" id="totalDiscount" class="border p-2 rounded w-full">
+        </div>
+        <button onclick="calculateTotal()" class="bg-green-500 text-white px-4 py-2 rounded">Hitung Total</button>
+        <div class="mb-4 mt-4">
+            <label for="amountPaid" class="block text-gray-700">Jumlah Dibayarkan</label>
+            <input type="text" id="amountPaid" class="border p-2 rounded w-full" required>
+        </div>
+        <button onclick="calculateChange()" class="bg-green-500 text-white px-4 py-2 rounded">Hitung Kembalian</button>
+        <div id="result" class="result hidden mt-6 bg-gray-100 p-4 rounded-lg shadow-lg"></div>
+    </div>
+</body>
+</html>

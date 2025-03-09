@@ -19,3 +19,15 @@ Apabila anda tertarik untuk mengembangkan website ini lebih lanjut, silahkan hub
 
 Whatsapp: +62 812 9183 7751  
 Email: beni.kenneth@gmail.com
+
+## Link Website
+
+Website SmartFriend dapat diakses melalui link  
+https://theworldpilot.github.io/SmartFriend/
+
+Untuk login, gunakan salah satu username dan password di bawah:  
+    Username	: benianaus  
+    Password	: 1sampe8  
+    
+    Username	: ujan_156  
+    Password	: martini  

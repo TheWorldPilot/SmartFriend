@@ -1,5 +1,7 @@
 # SELAMAT DATANG DI WEBSITE SMARTFRIEND
 
+![Logo SmartFriend](/gambar/LogoSmartFriend%20.jpeg)
+
 ## Apa itu SmartFriend?
 
 SmartFriend merupakan konsep website pembelajaran yang dibuat untuk memenuhi syarat Ujian Sekolah Informatika.
@@ -11,8 +13,9 @@ SmartFriend terinspirasi dari berbagai media pembelajaran yang ada. Kami mendesa
 
 ## Pengembangan Lebih Lanjut
 
-Saat ini SmartFriend tidak mengalami pembaruan lebih lanjut. Perubahan terakhir tertanda pada tanggal **9 Maret 2025**.
+Saat ini SmartFriend tidak mengalami pembaruan lebih lanjut.  
+Perubahan terakhir tertanda pada tanggal **9 Maret 2025**.  
 Apabila anda tertarik untuk mengembangkan website ini lebih lanjut, silahkan hubungi kami melalui
 
-Whatsapp: +62 812 9183 7751
+Whatsapp: +62 812 9183 7751  
 Email: beni.kenneth@gmail.com

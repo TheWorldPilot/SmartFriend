@@ -1,6 +1,6 @@
 # SELAMAT DATANG DI WEBSITE SMARTFRIEND
 
-<img src="/gambar/LogoSmartFriend.jpeg" align="left" height="500" width="500">
+<img src="/gambar/LogoSmartFriend.jpeg" height="500" width="500">
 
 ## Apa itu SmartFriend?
 

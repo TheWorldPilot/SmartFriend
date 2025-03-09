@@ -1,6 +1,6 @@
 # SELAMAT DATANG DI WEBSITE SMARTFRIEND
 
-![Logo SmartFriend](/gambar/LogoSmartFriend%20.jpeg)
+![Logo SmartFriend](/gambar/LogoSmartFriend.jpeg)
 
 ## Apa itu SmartFriend?
 

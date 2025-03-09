@@ -1,6 +1,7 @@
 # SELAMAT DATANG DI WEBSITE SMARTFRIEND
 
 ![Logo SmartFriend](/gambar/LogoSmartFriend.jpeg)
+<img src="/gambar/LogoSmartFriend.jpeg" align="left" height="48" width="48">
 
 ## Apa itu SmartFriend?
 
@@ -29,6 +30,8 @@ Untuk login, gunakan salah satu username dan password di bawah:
 
     > Username	: benianaus  
     > Password	: 1sampe8  
-    
+
+atau
+
     > Username	: ujan_156  
     > Password	: martini  
